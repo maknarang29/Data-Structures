@@ -53,11 +53,26 @@ int Stack::peek()
 
 
 //Stack using Linked Lists
-class StackNode{
+
+//Create Node Class
+class Node{
     public:
     int data;
-    StackNode* next;
+    Node* next;
 };
+
+//Implement a linked List
+Node* newNode(int newdata){
+    Node* stackNode = new Node();
+    stackNode->data = newdata;
+    stackNode->next = NULL;
+    return stackNode;
+}
+//Check if stack is empty
+int isEmpty(Node* root){
+    return !root;
+}
+
 
 
 int main()
