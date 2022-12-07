@@ -8,7 +8,7 @@
 int main(){
 
     Node* head = NULL; 
-      
+          
     // Insert 6. So linked list becomes 6->NULL 
     append(&head, 6); 
       

@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 
-class Array{
+
 //Searching an element in array (unsorted) [Linear Search] 
-public:
-int Search(int arr[], int elem){
-    int len = sizeof(arr)/sizeof(arr[0]);
-    for (int i = 0; i < len; i++){
+
+int Search(int arr[], int elem, int n){
+    
+    for (int i = 0; i < n; i++){
         if (arr[i] == elem) return i;
     };
     return -1;
@@ -44,4 +44,13 @@ int findLargest(int arr[]){
     };
     return max;
 };
-};
+int main(){
+    int arr[] = {1,2,3,4,5,6,7,8,9,9,4,6,3,25,6,23,46,12};
+    cout<<Search(arr,25);
+    insert(arr,18,3,1);
+    cout<<arr;
+    Delete(arr,3);
+    cout<<arr;
+    cout<<findLargest(arr);
+
+}
