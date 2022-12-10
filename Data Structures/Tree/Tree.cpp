@@ -1,34 +1,17 @@
-#include <iostream>
-using namespace std;
-
-// struct node{
-//   int data;
-//   struct node* left;
-//   struct node* right;
-// };
+#include<iostream>
+#pragma once
 
 
-// class Node {
-//     public:
-//     int data;
-//     Node *left;
-//     Node *right;
 
-//     Node (int val){
-//         data = val;
-//         left = NULL;
-//         right = NULL;         
-//     }
-// };
-class Node {
+class TreeNode {
 public:
     int data;
-    Node* left;
-    Node* right;
+    TreeNode* left;
+    TreeNode* right;
     // Val is the key or the value that
     // has to be added to the data part
-S
-    Node (int val)
+    
+    TreeNode (int val)
     {
         data = val;
         // Left and right child for node
@@ -36,5 +19,5 @@ S
         left = NULL;
         right = NULL;
     }
-
 };
+
