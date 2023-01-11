@@ -1,6 +1,10 @@
-#include <iostream
-#include "Tree.cpp"
+#include <iostream>
+#include <vector>
+#include "Tree.h"
 using namespace std;
+
+
+
 
 
 
@@ -56,3 +60,6 @@ void printPostorder(TreeNode* node){
     printPreorder(node->right);
     cout<<node->data<<" ";
 }
+
+
+

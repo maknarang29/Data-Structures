@@ -20,4 +20,3 @@ public:
         right = NULL;
     }
 };
-

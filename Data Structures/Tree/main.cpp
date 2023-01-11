@@ -1,6 +1,7 @@
 #include <iostream>
 #include "traversal.cpp"
-
+#include "genFuncs.cpp"
+using namespace std;
 
 int main()
 {
@@ -18,6 +19,7 @@ int main()
     printPreorder(root);
     cout << "\nPostorder traversal of binary tree is \n";
     printPostorder(root);
+    cout << "\nHeight of Tree is "<<height(root);
  
  
 } 
