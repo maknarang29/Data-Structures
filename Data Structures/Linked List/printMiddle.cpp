@@ -53,10 +53,12 @@ void printList(Node *node)
 } 
 
 
-void swap(Node *head){
-    if(head->next->next == NULL) return;
-    Node* temp = head;
-    head->val = head->next->val;
-    head->next->val = temp;
-    swap(head->next->next);
+Node* swap(Node *head){
+    if(!head || !head->next) return head;
+    Node* temp;
+    temp = head->next;
+    head->next = swap(head->next->next);
+    temp->next = head;
+    
+    return temp;
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "LinkedList.cpp"
+#include "LinkedList.h"
 using namespace std;
 
 
@@ -14,7 +14,7 @@ void deleteNode(Node** headref, int k ){
 
 
     //If head node itself contains the key 
-    if (temp != NULL & temp->data == k){
+    if (temp != NULL & temp->val == k){
         //Chenge the pointer direction of headref to that of the next node direction
         *headref = temp->next;
         //delete temp
@@ -24,7 +24,7 @@ void deleteNode(Node** headref, int k ){
     //Else Search for the key and delete the node
     else{
         //traversing through the linkedlist keeping track of the previous node
-        while(temp!=NULL & temp->data==k){
+        while(temp!=NULL & temp->val ==k){
             prev = temp;
             temp = temp->next;
         }
