@@ -1,5 +1,5 @@
 #include <iostream>
-#include "LinkedList.cpp"
+#include "LinkedList.h"
 //Method to insert a new node in the beginning of the linked list
 /*
 Given the reference (pointer to pointer of the head of the linked list
@@ -11,7 +11,7 @@ void push(Node** headRef, int newdata){
     //create a new node
     Node* newNode = new Node();
     //Assigne data to the new node
-    newNode->data = newdata;
+    newNode->val = newdata;
     //assign the pointer of new node to pointer of the head of the linkedlist 
     newNode->next = (*headRef);
     //Move head to point to the new node
@@ -35,7 +35,7 @@ void addAfter(Node* prevnode, int newData){
     Node* newNode = new Node();
 
     //Assign data
-    newNode->data = newData;
+    newNode->val = newData;
 
     //next of new node is made into next of previous node
     newNode->next = prevnode->next;
@@ -54,7 +54,7 @@ append new node at the end
 void append(Node** headref, int newdata){
     //Create new node, assign data and next  
     Node* newNode = new Node();
-    newNode->data = newdata;
+    newNode->val = newdata;
     newNode->next = NULL;
     
     //If an empty linked list

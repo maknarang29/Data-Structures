@@ -1,5 +1,5 @@
 #include <iostream>
-#include "LinkedList.cpp"
+#include "LinkedList.h"
 #include "Insert.cpp"
 #include "printMiddle.cpp"
 
@@ -27,10 +27,13 @@ int main(){
     // Insert 8, after 7. So linked 
     // list becomes 1->7->8->6->4->NULL 
     addAfter(head->next, 8); 
+    append(&head, 9); 
       
     cout<<"Created Linked list is: "; 
     printList(head); 
-    printMiddle(head);     
+    printMiddle(head);  
+    swap(head);
+    printList(head);   
     return 0;
 }
 
