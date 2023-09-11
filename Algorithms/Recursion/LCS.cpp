@@ -16,7 +16,12 @@ int longestCommonSubsequence(string text1, string text2) {
        return ans;
 
     }
-    int main()
+int LCSRec(string s1, string s2, int m , int n){
+        if (m == 0 || n == 0) return 0;
+        if (s1[m-1] == s2[n-1]) return 1+LCSRec(s1,s2,m-1,n-1);
+        else return max(LCSRec(s1,s2,m-1,n),LCSRec(s1,s2,m,n-1));
+}
+   int main()
 {
     char X[] = "AGGTAB";
     char Y[] = "GXTXAYB";
@@ -24,7 +29,7 @@ int longestCommonSubsequence(string text1, string text2) {
     int m = strlen(X);
     int n = strlen(Y);
     vector<vector<int> > dp(m + 1, vector<int>(n + 1, -1));
-    cout << "Length of LCS is " << longestCommonSubsequence(X, Y);
-
+    cout << "Length of LCS is " << longestCommonSubsequence(X, Y)<<endl;
+    cout << "Recursion Method:" << LCSRec(X,Y,m,n);
     return 0;
 }
